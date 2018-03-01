@@ -17,7 +17,6 @@ pipeline {
 	stage('InstallRequirements'){
 		steps{
 			sh '''
-				//bash -c "source $(WORKSPACE)/entorno_virtual/bin/activate && $(WORKSPACE)/entorno_virtual/bin/python $(WORKSPACE)/entorno_virtual/bin/pip install -r requirements.txt"
 				bash -c "source entorno_virtual/bin/activate && pip install -r requirements.txt"
 			'''
 		}
